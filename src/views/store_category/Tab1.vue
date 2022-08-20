@@ -43,7 +43,7 @@
                       <ion-button color="danger"> order </ion-button>
                     </ion-col>
                     <ion-col size="4">
-                      <ion-icon name="cartOutline"></ion-icon>
+                      <ion-icon name="cart-Outline"></ion-icon>
                     </ion-col>
                   </ion-row>
                 </ion-grid>
