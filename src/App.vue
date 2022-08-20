@@ -108,18 +108,18 @@ export default defineComponent({
         mdIcon: storefrontSharp,
       },
       {
+        title: "Favorites",
+        url: "/folder/FavPage",
+        iosIcon: heartOutline,
+        mdIcon: heartSharp,
+      },
+      {
         title: "Fruits",
         url: "/fruits",
         iosIcon: paperPlaneOutline,
         mdIcon: paperPlaneSharp,
       },
 
-      {
-        title: "Favorites",
-        url: "/folder/FavPage",
-        iosIcon: heartOutline,
-        mdIcon: heartSharp,
-      },
       {
         title: "Trash",
         url: "/folder/Trash",
