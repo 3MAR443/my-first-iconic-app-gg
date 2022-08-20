@@ -19,7 +19,7 @@
       <div id="container ">
         <strong class="capitalize">Hello World</strong>
         <p>
-          Explore
+          <ion-icon slot="start" :name="heartCircleOutline"></ion-icon>
           <a
             target="_blank"
             rel="noopener noreferrer"
@@ -34,6 +34,7 @@
 
 <script>
 import { defineComponent } from "vue";
+import { heartCircleOutline } from "ionicons/icons";
 import {
   IonButtons,
   IonContent,
@@ -42,6 +43,7 @@ import {
   IonPage,
   IonTitle,
   IonToolbar,
+  IonIcon,
 } from "@ionic/vue";
 
 export default defineComponent({
@@ -54,6 +56,10 @@ export default defineComponent({
     IonPage,
     IonTitle,
     IonToolbar,
+    IonIcon,
+  },
+  setup() {
+    return { heartCircleOutline };
   },
 });
 </script>
