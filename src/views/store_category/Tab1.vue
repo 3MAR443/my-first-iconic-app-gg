@@ -35,15 +35,17 @@
                   Keep close to Nature's heart... and break clear away, once in
                   awhile, and climb a mountain
                   <ion-icon name="cartSharp"></ion-icon> or spend a week in the
-                  woods. Wash your spirit clean. gggg
+                  woods. Wash your spirit clean.
                 </ion-card-content>
                 <ion-grid>
                   <ion-row class="ion-justify-content-between">
-                    <ion-col size="4" class="">
+                    <ion-col size="6" class="">
                       <ion-button color="danger"> order </ion-button>
                     </ion-col>
-                    <ion-col size="4">
-                      <ion-icon name="cart-Outline"></ion-icon>
+                    <ion-col size="6">
+                      <ion-button>
+                        <ion-icon :ios="cartSharp" :md="cartOutline"></ion-icon>
+                      </ion-button>
                     </ion-col>
                   </ion-row>
                 </ion-grid>

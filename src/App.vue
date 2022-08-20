@@ -116,7 +116,7 @@ export default defineComponent({
 
       {
         title: "Favorites",
-        url: "/folder/Favorites",
+        url: "/folder/FavPage",
         iosIcon: heartOutline,
         mdIcon: heartSharp,
       },

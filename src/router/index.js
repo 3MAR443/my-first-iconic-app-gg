@@ -3,6 +3,7 @@ import { createRouter, createWebHistory } from '@ionic/vue-router';
 import FruitsPage from "@/views/FruitsPage";
 import TabsPage from '@/views/TabsPage';
 import SettingsPage from '@/views/SettingsPage';
+import FavPage from '@/views/FavPage';
 /* import DesPage from '@/views/store_category/Tab1.vue';
  */
 const routes = [
@@ -20,6 +21,10 @@ const routes = [
   {
     path: '/folder/Store_Category/:name',
     component: () => import('../views/store_category/Tab1.vue')
+  },
+  {
+    path: '/folder/FavPage',
+    component: FavPage,
   },
 
 
