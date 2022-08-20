@@ -80,7 +80,7 @@ export default defineComponent({
     const showLoading = async () => {
       const loading = await loadingController.create({
         message: "Dismissing after 2.5 seconds...",
-        duration: 4000,
+        duration: 15000,
       });
 
       loading.present();

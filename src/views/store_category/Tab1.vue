@@ -36,6 +36,16 @@
                   awhile, and climb a mountain or spend a week in the woods.
                   Wash your spirit clean. gggg
                 </ion-card-content>
+                <ion-grid>
+                  <ion-row class="ion-justify-content-between">
+                    <ion-col size="4" class="">
+                      <ion-button color="danger"> order </ion-button>
+                    </ion-col>
+                    <ion-col size="4">
+                      <ion-button> ff</ion-button>
+                    </ion-col>
+                  </ion-row>
+                </ion-grid>
               </ion-card>
             </ion-col>
           </ion-row>
@@ -64,6 +74,7 @@ import {
   IonRow,
   IonCol,
   IonImg,
+  IonButton,
 } from "@ionic/vue";
 
 export default defineComponent({
@@ -86,6 +97,7 @@ export default defineComponent({
     IonRow,
     IonCol,
     IonImg,
+    IonButton,
   },
 
   data() {
