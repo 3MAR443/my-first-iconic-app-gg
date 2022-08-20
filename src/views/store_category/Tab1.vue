@@ -42,7 +42,11 @@
                       <ion-button color="danger"> order </ion-button>
                     </ion-col>
                     <ion-col size="4">
-                      <ion-button> ff</ion-button>
+                      <ion-button>
+                        <ion-icon ios="cart-outline" md="cart-sharp"
+                          >g</ion-icon
+                        >
+                      </ion-button>
                     </ion-col>
                   </ion-row>
                 </ion-grid>
@@ -57,6 +61,7 @@
 
 <script>
 import { defineComponent } from "vue";
+import { cartOutline, cartSharp } from "ionicons/icons";
 import {
   IonButtons,
   IonContent,
@@ -75,6 +80,7 @@ import {
   IonCol,
   IonImg,
   IonButton,
+  IonIcon,
 } from "@ionic/vue";
 
 export default defineComponent({
@@ -98,12 +104,16 @@ export default defineComponent({
     IonCol,
     IonImg,
     IonButton,
+    IonIcon,
   },
 
   data() {
     return {
       items: ["Iphone", "galaxy", "Huawei"],
     };
+  },
+  setup() {
+    return { cartOutline, cartSharp };
   },
 });
 </script>
