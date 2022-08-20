@@ -17,16 +17,31 @@
       </ion-header>
 
       <div id="container ">
-        <strong class="capitalize">Hello World</strong>
-        <p>
-          <ion-icon slot="start" :name="heartCircleOutline"></ion-icon>
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://ionicframework.com/docs/components"
-            >UI Components</a
-          >
-        </p>
+        <ion-col v-for="(item, index) in items" :key="index" size="12">
+          <ion-card>
+            <ion-img src="..\phones\c6.jpg"></ion-img>
+            <ion-card-header>
+              <ion-card-subtitle>{{ item }}</ion-card-subtitle>
+              <ion-card-title>Card Title</ion-card-title>
+            </ion-card-header>
+
+            <ion-card-content>
+              Keep close to Nature's heart... and break clear away, once in
+              awhile, and climb a mountain
+              <ion-icon name="cartSharp"></ion-icon> or spend a week in the
+              woods. Wash your spirit clean.
+            </ion-card-content>
+            <ion-grid>
+              <ion-row class="ion-justify-content-between">
+                <ion-col size="" class="">
+                  <ion-button expand="block" class="" color="danger">
+                    order
+                  </ion-button>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-card>
+        </ion-col>
       </div>
     </ion-content>
   </ion-page>
@@ -34,15 +49,24 @@
 
 <script>
 import { defineComponent } from "vue";
-import { heartCircleOutline } from "ionicons/icons";
+
 import {
   IonButtons,
   IonContent,
   IonHeader,
-  IonMenuButton,
   IonPage,
   IonTitle,
   IonToolbar,
+  IonCard,
+  IonCardContent,
+  IonCardHeader,
+  IonCardSubtitle,
+  IonCardTitle,
+  IonGrid,
+  IonRow,
+  IonCol,
+  IonImg,
+  IonButton,
   IonIcon,
 } from "@ionic/vue";
 
@@ -52,14 +76,26 @@ export default defineComponent({
     IonButtons,
     IonContent,
     IonHeader,
-    IonMenuButton,
     IonPage,
     IonTitle,
     IonToolbar,
+
+    IonCard,
+    IonCardContent,
+    IonCardHeader,
+    IonCardSubtitle,
+    IonCardTitle,
+    IonGrid,
+    IonRow,
+    IonCol,
+    IonImg,
+    IonButton,
     IonIcon,
   },
-  setup() {
-    return { heartCircleOutline };
+  data() {
+    return {
+      items: ["Iphone", "galaxy", "Huawei"],
+    };
   },
 });
 </script>
