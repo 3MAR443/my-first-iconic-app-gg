@@ -34,7 +34,7 @@
                 <ion-card-content>
                   Keep close to Nature's heart... and break clear away, once in
                   awhile, and climb a mountain or spend a week in the woods.
-                  Wash your spirit clean.
+                  Wash your spirit clean. gggg
                 </ion-card-content>
               </ion-card>
             </ion-col>
