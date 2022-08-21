@@ -26,7 +26,8 @@ import axios from 'axios';
 import VueAxios from 'vue-axios';
 const app = createApp(App)
   .use(IonicVue)
-  .use(router).use(VueAxios, axios);
+  .use(router)
+  .use(VueAxios, axios);
 
 router.isReady().then(() => {
   app.mount('#app');

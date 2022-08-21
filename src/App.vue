@@ -34,6 +34,7 @@
                   :md="p.mdIcon"
                 ></ion-icon>
                 <ion-label>{{ p.title }}</ion-label>
+                <ion-badge></ion-badge>
               </ion-item>
             </ion-menu-toggle>
           </ion-list>
@@ -58,6 +59,7 @@ import {
   IonNote,
   IonRouterOutlet,
   IonSplitPane,
+  IonBadge,
 } from "@ionic/vue";
 import { defineComponent, ref } from "vue";
 import { useRoute } from "vue-router";
@@ -80,6 +82,7 @@ import {
   settingsSharp,
   storefrontOutline,
   storefrontSharp,
+  IonBadge,
 } from "ionicons/icons";
 
 export default defineComponent({

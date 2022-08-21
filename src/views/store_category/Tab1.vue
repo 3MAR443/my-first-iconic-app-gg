@@ -23,7 +23,7 @@
       <div id="container">
         <ion-grid>
           <ion-row>
-            <ion-col v-for="(item, index) in items" :key="index" size="12">
+            <ion-col v-for="item in items" :key="item" size="12">
               <ion-card>
                 <ion-img src="..\phones\c6.jpg"></ion-img>
                 <ion-card-header>
@@ -108,8 +108,22 @@ export default defineComponent({
 
   data() {
     return {
-      items: ["Iphone", "galaxy", "Huawei"],
+      items: [],
+      items_category: [],
     };
+  },
+
+  created() {
+    this.axios.get(`http://127.0.0.1:8000/api/get_item`).then((res) => {
+      this.items = res.data.filter(function (el) {
+        return el.item_category_id == 1;
+      });
+    });
+    this.axios
+      .get(`http://127.0.0.1:8000/api/get_item_category`)
+      .then((res) => {
+        this.items_category = res.data;
+      });
   },
   setup() {
     return { cartOutline, cartSharp };
