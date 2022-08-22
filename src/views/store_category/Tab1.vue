@@ -38,7 +38,9 @@
                 <ion-grid>
                   <ion-row class="ion-justify-content-between">
                     <ion-col size="6">
-                      <ion-button color="danger"> order </ion-button>
+                      <ion-button expand="full" color="danger">
+                        order
+                      </ion-button>
                     </ion-col>
                     <ion-col size="6">
                       <ion-button>
