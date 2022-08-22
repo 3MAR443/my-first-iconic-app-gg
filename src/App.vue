@@ -59,7 +59,6 @@ import {
   IonNote,
   IonRouterOutlet,
   IonSplitPane,
-  IonBadge,
 } from "@ionic/vue";
 import { defineComponent, ref } from "vue";
 import { useRoute } from "vue-router";
@@ -82,7 +81,6 @@ import {
   settingsSharp,
   storefrontOutline,
   storefrontSharp,
-  IonBadge,
 } from "ionicons/icons";
 
 export default defineComponent({

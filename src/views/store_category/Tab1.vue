@@ -27,15 +27,11 @@
               <ion-card>
                 <ion-img src="..\phones\c6.jpg"></ion-img>
                 <ion-card-header>
-                  <ion-card-subtitle>{{ item }}</ion-card-subtitle>
-                  <ion-card-title>Card Title</ion-card-title>
+                  <ion-card-title> {{ item.name }} </ion-card-title>
                 </ion-card-header>
 
                 <ion-card-content>
-                  Keep close to Nature's heart... and break clear away, once in
-                  awhile, and climb a mountain
-                  <ion-icon name="cartSharp"></ion-icon> or spend a week in the
-                  woods. Wash your spirit clean.
+                  {{ item.description }}
                 </ion-card-content>
                 <ion-grid>
                   <ion-row class="ion-justify-content-between">
@@ -61,6 +57,7 @@
 <script>
 import { defineComponent } from "vue";
 import { cartOutline, cartSharp } from "ionicons/icons";
+import { useRoute } from "vue-router";
 import {
   IonButtons,
   IonContent,
@@ -72,7 +69,6 @@ import {
   IonCard,
   IonCardContent,
   IonCardHeader,
-  IonCardSubtitle,
   IonCardTitle,
   IonGrid,
   IonRow,
@@ -96,7 +92,7 @@ export default defineComponent({
     IonCard,
     IonCardContent,
     IonCardHeader,
-    IonCardSubtitle,
+
     IonCardTitle,
     IonGrid,
     IonRow,
@@ -109,21 +105,18 @@ export default defineComponent({
   data() {
     return {
       items: [],
-      items_category: [],
+      api_1: "http://localhost/omar-api/public/api/get_item",
     };
   },
 
   created() {
-    this.axios.get(`http://127.0.0.1:8000/api/get_item`).then((res) => {
+    const route = useRoute();
+
+    this.axios.get(this.api_1).then((res) => {
       this.items = res.data.filter(function (el) {
-        return el.item_category_id == 1;
+        return el.item_category_id == route.params.name;
       });
     });
-    this.axios
-      .get(`http://127.0.0.1:8000/api/get_item_category`)
-      .then((res) => {
-        this.items_category = res.data;
-      });
   },
   setup() {
     return { cartOutline, cartSharp };

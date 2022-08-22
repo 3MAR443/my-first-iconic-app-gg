@@ -19,14 +19,14 @@
       <div id="container">
         <ion-grid>
           <ion-row class="ion-justify-content-between">
-            <ion-col v-for="(cate, index) in cates" :key="index" size="6">
+            <ion-col v-for="cate in cates" :key="cate" size="6">
               <ion-button
                 @click="showLoading"
                 expand="block"
                 fill="outline"
-                :href="'/folder/Store_Category/' + cate.name"
+                :href="'/folder/Store_Category/' + cate.id"
               >
-                {{ cate.name }}</ion-button
+                {{ cate.category_name }}</ion-button
               >
             </ion-col>
           </ion-row>
@@ -69,11 +69,8 @@ export default defineComponent({
   },
   data() {
     return {
-      cates: [
-        { name: "phones", items: ["iphone", "galaxy"] },
-        { name: "electronics", items: ["gg", "ff"] },
-        { name: "accessories", items: ["iphone", "galaxy"] },
-      ],
+      cates: [],
+      api: "",
     };
   },
   setup() {
@@ -87,6 +84,13 @@ export default defineComponent({
     };
 
     return { showLoading };
+  },
+  created() {
+    this.axios
+      .get("http://localhost/omar-api/public/api/get_item_category")
+      .then((res) => {
+        this.cates = res.data;
+      });
   },
 });
 </script>
