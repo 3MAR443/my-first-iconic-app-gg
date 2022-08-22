@@ -22,6 +22,7 @@
             <ion-col v-for="cate in cates" :key="cate" size="6">
               <ion-button
                 @click="showLoading"
+                size="large"
                 expand="block"
                 fill="outline"
                 :href="'/folder/Store_Category/' + cate.id"
@@ -76,7 +77,7 @@ export default defineComponent({
   setup() {
     const showLoading = async () => {
       const loading = await loadingController.create({
-        message: "Dismissing after 2.5 seconds...",
+        message: "Loading...",
         duration: 15000,
       });
 
