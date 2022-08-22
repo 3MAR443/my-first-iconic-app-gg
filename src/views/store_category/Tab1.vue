@@ -25,7 +25,9 @@
           <ion-row>
             <ion-col v-for="item in items" :key="item" size="12">
               <ion-card>
-                <ion-img src="..\phones\c6.jpg"></ion-img>
+                <ion-img
+                  :src="'http://localhost/omar-api/public/' + item.img"
+                ></ion-img>
                 <ion-card-header>
                   <ion-card-title> {{ item.name }} </ion-card-title>
                 </ion-card-header>
